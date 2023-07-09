@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: logineko
+  profiles:
+    active: local
+  main:
+    banner-mode: off
+  jackson:
+    default-property-inclusion: NON_NULL
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: logineko
+    hikari:
+      minimum-idle: 5
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    show-sql: true
+    open-in-view: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+
+server:
+  port: 8080
+
+logging:
+  file:
+    name: logs/spring.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p --- [%t] %-40.40logger{39} : %replace(%m%wEx){'\n','\n\u0009'}%nopex%n"
+  level:
+    root: INFO
+

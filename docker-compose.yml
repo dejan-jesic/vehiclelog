@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: vehiclelog-db
+    hostname: primary
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_MODE: primary
+      POSTGRES_DATABASE: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_PRIMARY_PORT: 5432
+  vehiclelog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vehiclelog
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres/postgres
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+networks:
+  default:
+    name: vehiclelog_network
