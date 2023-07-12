@@ -1,3 +1,3 @@
 echo "Stopping application..."
 
-../docker-compose down
+docker-compose down
