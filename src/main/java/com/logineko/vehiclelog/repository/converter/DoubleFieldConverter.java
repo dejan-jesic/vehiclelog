@@ -1,6 +1,6 @@
-package com.logineko.vehiclelog.persistance.converter;
+package com.logineko.vehiclelog.repository.converter;
 
-import com.logineko.vehiclelog.persistance.model.VehicleLog;
+import com.logineko.vehiclelog.repository.model.VehicleLog;
 import com.opencsv.bean.AbstractBeanField;
 
 public class DoubleFieldConverter extends AbstractBeanField<VehicleLog, Double> {

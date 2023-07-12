@@ -1,9 +1,9 @@
 package com.logineko.vehiclelog.service;
 
-import com.logineko.vehiclelog.persistance.VehicleLogRepository;
-import com.logineko.vehiclelog.persistance.model.VehicleLog;
-import com.logineko.vehiclelog.web.search.VehicleLogSearchDTO;
-import com.logineko.vehiclelog.web.search.VehicleLogSpecification;
+import com.logineko.vehiclelog.repository.VehicleLogRepository;
+import com.logineko.vehiclelog.repository.model.VehicleLog;
+import com.logineko.vehiclelog.controller.search.VehicleLogSearchDTO;
+import com.logineko.vehiclelog.controller.search.VehicleLogSpecification;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

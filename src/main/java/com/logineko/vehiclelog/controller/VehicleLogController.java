@@ -1,8 +1,8 @@
-package com.logineko.vehiclelog.web;
+package com.logineko.vehiclelog.controller;
 
-import com.logineko.vehiclelog.persistance.model.VehicleLog;
+import com.logineko.vehiclelog.repository.model.VehicleLog;
 import com.logineko.vehiclelog.service.VehicleLogService;
-import com.logineko.vehiclelog.web.search.VehicleLogSearchDTO;
+import com.logineko.vehiclelog.controller.search.VehicleLogSearchDTO;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

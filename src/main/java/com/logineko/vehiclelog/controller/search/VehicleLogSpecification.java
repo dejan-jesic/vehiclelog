@@ -1,10 +1,10 @@
-package com.logineko.vehiclelog.web.search;
+package com.logineko.vehiclelog.controller.search;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.logineko.vehiclelog.persistance.model.CreeperStatus;
-import com.logineko.vehiclelog.persistance.model.VehicleLog;
+import com.logineko.vehiclelog.repository.model.CreeperStatus;
+import com.logineko.vehiclelog.repository.model.VehicleLog;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;

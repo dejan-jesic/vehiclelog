@@ -1,4 +1,4 @@
-package com.logineko.vehiclelog.web.search;
+package com.logineko.vehiclelog.controller.search;
 
 public enum SearchOperation {
 

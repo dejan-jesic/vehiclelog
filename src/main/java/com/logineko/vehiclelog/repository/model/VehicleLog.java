@@ -1,4 +1,4 @@
-package com.logineko.vehiclelog.persistance.model;
+package com.logineko.vehiclelog.repository.model;
 
 import java.time.LocalDateTime;
 

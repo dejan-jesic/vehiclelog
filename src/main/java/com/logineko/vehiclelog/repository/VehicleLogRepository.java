@@ -1,6 +1,6 @@
-package com.logineko.vehiclelog.persistance;
+package com.logineko.vehiclelog.repository;
 
-import com.logineko.vehiclelog.persistance.model.VehicleLog;
+import com.logineko.vehiclelog.repository.model.VehicleLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

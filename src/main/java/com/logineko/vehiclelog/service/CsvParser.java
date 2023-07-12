@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import com.logineko.vehiclelog.persistance.model.CombineLog;
-import com.logineko.vehiclelog.persistance.model.TractorLog;
+import com.logineko.vehiclelog.repository.model.CombineLog;
+import com.logineko.vehiclelog.repository.model.TractorLog;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.extern.slf4j.Slf4j;

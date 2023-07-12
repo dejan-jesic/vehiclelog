@@ -1,4 +1,4 @@
-package com.logineko.vehiclelog.web.validation;
+package com.logineko.vehiclelog.controller.validation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

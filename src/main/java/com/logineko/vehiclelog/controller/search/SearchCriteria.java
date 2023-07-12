@@ -1,6 +1,6 @@
-package com.logineko.vehiclelog.web.search;
+package com.logineko.vehiclelog.controller.search;
 
-import static com.logineko.vehiclelog.web.search.SearchOperation.EQUALS;
+import static com.logineko.vehiclelog.controller.search.SearchOperation.EQUALS;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

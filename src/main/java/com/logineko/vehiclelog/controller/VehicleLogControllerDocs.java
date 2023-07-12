@@ -1,7 +1,7 @@
-package com.logineko.vehiclelog.web;
+package com.logineko.vehiclelog.controller;
 
-import com.logineko.vehiclelog.persistance.model.VehicleLog;
-import com.logineko.vehiclelog.web.search.VehicleLogSearchDTO;
+import com.logineko.vehiclelog.repository.model.VehicleLog;
+import com.logineko.vehiclelog.controller.search.VehicleLogSearchDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;

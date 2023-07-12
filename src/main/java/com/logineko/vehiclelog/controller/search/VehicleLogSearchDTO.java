@@ -1,8 +1,8 @@
-package com.logineko.vehiclelog.web.search;
+package com.logineko.vehiclelog.controller.search;
 
 import java.util.List;
 
-import com.logineko.vehiclelog.web.validation.ValidVehicleLogSearch;
+import com.logineko.vehiclelog.controller.validation.ValidVehicleLogSearch;
 import jakarta.validation.constraints.NotEmpty;
 
 @ValidVehicleLogSearch

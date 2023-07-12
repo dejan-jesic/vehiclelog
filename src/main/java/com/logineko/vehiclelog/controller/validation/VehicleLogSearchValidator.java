@@ -1,16 +1,16 @@
-package com.logineko.vehiclelog.web.validation;
+package com.logineko.vehiclelog.controller.validation;
 
-import static com.logineko.vehiclelog.web.search.SearchOperation.CONTAINS;
-import static com.logineko.vehiclelog.web.search.SearchOperation.EQUALS;
-import static com.logineko.vehiclelog.web.search.SearchOperation.GREATER_THAN;
-import static com.logineko.vehiclelog.web.search.SearchOperation.LESS_THAN;
+import static com.logineko.vehiclelog.controller.search.SearchOperation.CONTAINS;
+import static com.logineko.vehiclelog.controller.search.SearchOperation.EQUALS;
+import static com.logineko.vehiclelog.controller.search.SearchOperation.GREATER_THAN;
+import static com.logineko.vehiclelog.controller.search.SearchOperation.LESS_THAN;
 
 import java.util.List;
 import java.util.Map;
 
-import com.logineko.vehiclelog.web.search.SearchCriteria;
-import com.logineko.vehiclelog.web.search.SearchOperation;
-import com.logineko.vehiclelog.web.search.VehicleLogSearchDTO;
+import com.logineko.vehiclelog.controller.search.SearchCriteria;
+import com.logineko.vehiclelog.controller.search.SearchOperation;
+import com.logineko.vehiclelog.controller.search.VehicleLogSearchDTO;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

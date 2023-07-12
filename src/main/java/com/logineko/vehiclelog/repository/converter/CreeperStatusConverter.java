@@ -1,7 +1,7 @@
-package com.logineko.vehiclelog.persistance.converter;
+package com.logineko.vehiclelog.repository.converter;
 
-import com.logineko.vehiclelog.persistance.model.CreeperStatus;
-import com.logineko.vehiclelog.persistance.model.VehicleLog;
+import com.logineko.vehiclelog.repository.model.CreeperStatus;
+import com.logineko.vehiclelog.repository.model.VehicleLog;
 import com.opencsv.bean.AbstractBeanField;
 
 public class CreeperStatusConverter extends AbstractBeanField<VehicleLog, CreeperStatus> {
