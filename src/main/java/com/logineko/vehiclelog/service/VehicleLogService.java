@@ -26,7 +26,7 @@ public class VehicleLogService {
     }
 
     @Transactional
-    public void importVehicles(final MultipartFile file) {
+    public void importVehicleLogs(final MultipartFile file) {
         if (file.getOriginalFilename().startsWith("LD_C")) {
             vehicleLogRepository.saveAll(csvParser.parseCombines(file));
         } else if (file.getOriginalFilename().startsWith("LD_A")) {

@@ -2,7 +2,7 @@ package com.logineko.vehiclelog.web.search;
 
 public enum SearchOperation {
 
-    EQUAL,
+    EQUALS,
     LESS_THAN,
     GREATER_THAN,
     CONTAINS

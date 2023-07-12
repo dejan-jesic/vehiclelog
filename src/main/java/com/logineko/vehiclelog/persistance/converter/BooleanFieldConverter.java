@@ -1,4 +1,4 @@
-package com.logineko.vehiclelog.config;
+package com.logineko.vehiclelog.persistance.converter;
 
 import com.logineko.vehiclelog.persistance.model.VehicleLog;
 import com.opencsv.bean.AbstractBeanField;

@@ -3,7 +3,6 @@ package com.logineko.vehiclelog.persistance.model;
 import java.time.LocalDateTime;
 
 import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;

@@ -1,15 +1,22 @@
-#!/bin/sh
+#!/bin/bash
 
-ORIGIN=$1
-DESTINATION=$2
+read -r "Which file do you want to use for search? (1 or 2): " file_input
 
-ORIGIN=${ORIGIN:=SRB}
-DESTINATION=${DESTINATION:=ESP}
+if [ "$file_input" = "1" ]; then
+  file_path="./search-1.json"
+elif [ "$file_input" = "2" ]; then
+  file_path="./search-2.json"
+else
+  echo "Invalid input. Exiting."
+  exit
+fi
 
-echo "Calculating fastest route from $ORIGIN to $DESTINATION..."
+if [ ! -f "$file_path" ]; then
+  echo "File not found: $file_path. Exiting."
+  exit
+fi
 
-URL="http://localhost:8080/api/v1/routing?origin=$ORIGIN&destination=$DESTINATION"
+response=$(curl -X POST -d "@$file_path" -s http://localhost:8000/api/v1/vehicle-logs/search)
 
-RESPONSE=$(curl -X GET -w "%{stderr}" -s -o - "$URL" 2>&1)
-
-echo "$RESPONSE"
+echo "Response: "
+echo "$response"

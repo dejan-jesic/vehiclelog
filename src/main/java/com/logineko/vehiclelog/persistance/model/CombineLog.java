@@ -1,7 +1,7 @@
 package com.logineko.vehiclelog.persistance.model;
 
-import com.logineko.vehiclelog.config.BooleanFieldConverter;
-import com.logineko.vehiclelog.config.DoubleFieldConverter;
+import com.logineko.vehiclelog.persistance.converter.BooleanFieldConverter;
+import com.logineko.vehiclelog.persistance.converter.DoubleFieldConverter;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvCustomBindByName;
 import jakarta.persistence.Column;

@@ -5,7 +5,6 @@ import com.logineko.vehiclelog.service.VehicleLogService;
 import com.logineko.vehiclelog.web.search.VehicleLogSearchDTO;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -16,11 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-@Slf4j
 @RestController
 @RequestMapping("/api/v1/vehicle-logs")
 @RequiredArgsConstructor
-public class VehicleLogController {
+public class VehicleLogController implements VehicleLogControllerDocs {
 
     private final VehicleLogService vehicleLogService;
 
@@ -33,7 +31,7 @@ public class VehicleLogController {
 
     @PostMapping(value = "/upload")
     public void uploadCSV(@RequestParam("file") final MultipartFile file) {
-        vehicleLogService.importVehicles(file);
+        vehicleLogService.importVehicleLogs(file);
     }
 
 }

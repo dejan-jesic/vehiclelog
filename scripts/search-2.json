@@ -1,0 +1,19 @@
+{
+  "searchCriteria": [
+    {
+      "field": "channelPositionPercentage",
+      "operation": "LESS_THAN",
+      "value": 95.25
+    },
+    {
+      "field": "engineLoad",
+      "operation": "GREATER_THAN",
+      "value": 30
+    },
+    {
+      "field": "cropType",
+      "operation": "CONTAINS",
+      "value": "iz"
+    }
+  ]
+}

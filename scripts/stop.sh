@@ -1,3 +1,3 @@
-echo "Stopping vehicle log..."
+echo "Stopping application..."
 
 ../docker-compose down

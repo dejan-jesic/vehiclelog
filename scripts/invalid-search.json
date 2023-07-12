@@ -1,0 +1,9 @@
+{
+  "searchCriteria": [
+    {
+      "field": "channelPositionPercentage",
+      "operation": "CONTAINS",
+      "value": 95.25
+    }
+  ]
+}

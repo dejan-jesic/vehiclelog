@@ -1,3 +1,3 @@
-echo "Starting vehicle log..."
+echo "Starting application..."
 
 ../docker-compose up -d

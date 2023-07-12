@@ -1,0 +1,13 @@
+{
+  "searchCriteria": [
+    {
+      "field": "creeperStatus",
+      "value": "ACTIVE"
+    },
+    {
+      "field": "ambientTemperature",
+      "operation": "GREATER_THAN",
+      "value": 6.2
+    }
+  ]
+}

@@ -20,6 +20,8 @@ services:
     container_name: vehiclelog
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres/postgres
+      USERNAME: postgres
+      PASSWORD: vehiclelog
     depends_on:
       - postgres
     ports:
