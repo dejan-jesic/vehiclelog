@@ -9,6 +9,6 @@ RUN adduser --system "$APP_NAME" && mkdir /log  && chown "$APP_NAME" /log
 
 USER $APP_NAME
 
-COPY target/"$APP_NAME"-"$APP_VERSION".jar app/app.jar
+COPY build/libs/"$APP_NAME"-"$APP_VERSION".jar app/app.jar
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+CMD ["java", "-jar", "app/app.jar"]

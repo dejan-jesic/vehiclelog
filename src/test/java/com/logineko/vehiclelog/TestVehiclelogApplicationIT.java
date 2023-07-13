@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.testcontainers.containers.PostgreSQLContainer;
 
 @TestConfiguration(proxyBeanMethods = false)
-public class TestVehiclelogApplication {
+public class TestVehiclelogApplicationIT {
 
     @Bean
     @ServiceConnection
@@ -16,7 +16,7 @@ public class TestVehiclelogApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.from(VehiclelogApplication::main).with(TestVehiclelogApplication.class).run(args);
+        SpringApplication.from(VehiclelogApplication::main).with(TestVehiclelogApplicationIT.class).run(args);
     }
 
 }

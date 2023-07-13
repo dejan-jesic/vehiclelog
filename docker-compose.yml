@@ -8,20 +8,16 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_MODE: primary
       POSTGRES_DATABASE: postgres
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: "postgres"
-      POSTGRES_PRIMARY_PORT: 5432
+      POSTGRES_PASSWORD: logineko
   vehiclelog:
+    container_name: vehicle-log
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: vehiclelog
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres/postgres
-      USERNAME: postgres
-      PASSWORD: vehiclelog
     depends_on:
       - postgres
     ports:

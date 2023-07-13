@@ -78,3 +78,6 @@ provide clear error messages to API consumers.
 * Springdoc documentation can be expanded to include request-response body types and all relevant fields.
 * PostgreSQL offers advanced indexing options and features such as table partitioning, 
 which can improve performance for large datasets.
+* Supported search operations in VehicleLogSearchValidator.java can be defined
+in a property file.
+* Ignore demo data and scripts while building .jar file.

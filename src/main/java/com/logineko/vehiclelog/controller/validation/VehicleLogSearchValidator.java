@@ -5,6 +5,7 @@ import static com.logineko.vehiclelog.controller.search.SearchOperation.EQUALS;
 import static com.logineko.vehiclelog.controller.search.SearchOperation.GREATER_THAN;
 import static com.logineko.vehiclelog.controller.search.SearchOperation.LESS_THAN;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,24 +17,28 @@ import jakarta.validation.ConstraintValidatorContext;
 
 public class VehicleLogSearchValidator implements ConstraintValidator<ValidVehicleLogSearch, VehicleLogSearchDTO> {
 
-    private static final Map<String, List<SearchOperation>> SUPPORTED_SEARCH = Map.of(
-            "id", List.of(EQUALS, LESS_THAN, GREATER_THAN),
-            "dateTime", List.of(LESS_THAN, GREATER_THAN),
-            "serialNumber", List.of(EQUALS, CONTAINS),
-            "longitude", List.of(EQUALS, LESS_THAN, GREATER_THAN),
-            "latitude", List.of(EQUALS, LESS_THAN, GREATER_THAN),
-            "totalWorkingHours", List.of(EQUALS, LESS_THAN, GREATER_THAN),
-            "engineSpeed", List.of(EQUALS, LESS_THAN, GREATER_THAN),
-            "engineLoad", List.of(EQUALS, LESS_THAN, GREATER_THAN),
-            "creeperStatus", List.of(EQUALS),
-            "ambientTemperature", List.of(EQUALS, LESS_THAN, GREATER_THAN)
-    );
+    private static final Map<String, List<SearchOperation>> SUPPORTED_SEARCH = new HashMap<>();
+
+    static {
+        SUPPORTED_SEARCH.put("id", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("dateTime", List.of(LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("serialNumber", List.of(EQUALS, CONTAINS));
+        SUPPORTED_SEARCH.put("longitude", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("latitude", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("totalWorkingHours", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("engineSpeed", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("engineLoad", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("creeperStatus", List.of(EQUALS));
+        SUPPORTED_SEARCH.put("ambientTemperature", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("channelPositionPercentage", List.of(EQUALS, LESS_THAN, GREATER_THAN));
+        SUPPORTED_SEARCH.put("cropType", List.of(EQUALS, CONTAINS));
+    }
 
     @Override
     public boolean isValid(final VehicleLogSearchDTO searchDTO, final ConstraintValidatorContext context) {
         for (final SearchCriteria criteria : searchDTO.searchCriteria()) {
             final List<SearchOperation> supportedFields = SUPPORTED_SEARCH.get(criteria.field());
-            if (!supportedFields.contains(criteria.operation())) {
+            if (supportedFields == null || !supportedFields.contains(criteria.operation())) {
                 return false;
             }
         }
