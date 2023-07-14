@@ -1,7 +1,7 @@
 # Vehicle log
 TODO
 
-More generic approach
+More generic approach  
 Tests
 
 ## Task
@@ -36,9 +36,11 @@ Create a simple REST service that is able to accept .csv file and store all its 
 
 * Make sure ports `8080` and `5432` are free
 * Navigate to the root of the project
-* Run `sh scripts/start.sh` which will run `docker-compose.yml` and start docker containers
-* **After ~30 sec** you can run `sh upload-files.sh`. Script will upload all 4 provided files.
-* Test query by running `sh test-1.sh` or `sh test-2.sh` script.
+* Run `sh run.sh` which will run `docker-compose.yml` and start docker containers
+* **After ~30 sec** you can run `sh initialize.sh`. Script will upload all 4 provided files.
+* Test query by running `sh filter.sh` script. It will ask you for the input, there are 2 .json
+files in /demo package.
+* Test invalid query by running `sh invalid-filter.sh` script.
 * At the end don't forget to stop all containers with `sh stop.sh`
 
 ### Swagger API description
